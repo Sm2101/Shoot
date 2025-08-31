@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Advanced 2D Shooting Game</title>
+    <title>Test Phaser Game</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 style="text-align:center;">Advanced 2D Shooting Game</h2>
     <div id="game-container"></div>
-    <script src="game.js"></script>
+    <script>
+    const config = {
+        type: Phaser.AUTO,
+        width: 600,
+        height: 400,
+        parent: 'game-container',
+        scene: {
+            create: function () {
+                this.add.text(100, 100, 'Phaser Works!', {fontSize: '32px', fill: '#fff'});
+            }
+        }
+    };
+    new Phaser.Game(config);
+    </script>
 </body>
 </html>
